@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <title>SignUp Page</title>
+</head>
+<style>
+    body {
+        background: radial-gradient(circle at 50% 0%, #6b7280 0%, #374151 60%, #1f2937 100%);
+    }
+
+    .signup-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 950px;
+        min-height: 680px;
+        height: auto;
+        background-color: white;
+    }
+
+    #toast {
+        display: none;
+        position: fixed;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #77dcc4c4;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 9999px;
+        font-size: 14px;
+        font-weight: 500;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .form-panel {
+        display: flex;
+        flex-direction: column;
+        padding: 26px 34px;
+        gap: 1.25rem;
+    }
+
+    .const-img {
+        display: none;
+    }
+
+    #create-account-btn {
+        margin-bottom: 0px;
+    }
+
+    .signin-text {
+        margin-top: 0px;
+    }
+
+    .name-message,
+    .email-message,
+    .password-message,
+    .confirm-password-message {
+        font-size: 12px;
+    }
+
+
+    @media (max-width: 640px) {
+        #toast {
+            width: 80%;
+            min-width: 150px;
+        }
+
+        body {
+            background: #fff;
+        }
+
+        .const-img {
+            display: block;
+        }
+
+        .image-panel {
+            display: none;
+        }
+
+        .iconsvp {
+            display: none;
+        }
+
+        .sign-icon {
+            text-align: center;
+        }
+    }
+</style>
+
+<body class="min-h-screen flex items-center justify-center">
+    <!-- FORM BODY -->
+    <form action="" class="signup-wrapper flex w-full max-w-5xl rounded-3xl overflow-hidden shadow-2xl">
+        <!-- Alert to fill all -->
+        <div id="toast" class="">
+
+        </div>
+
+        <!-- Left: Form panel -->
+        <div class="form-panel">
+
+            <div class="mb-5">
+                <div class="const-img text-center">
+                    <img src="./images/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg" alt="" class="h-8 mx-auto">
+                </div>
+                <div class="social-buttons text-left">
+                    <i data-lucide="arrow-left" class="iconsvp w-5 h-5 text-700 text-[#00b289]"></i>
+                    <p class="sign-icon text-[26px] font-bold text-gray-900">Sign Up</p>
+                    <p class="text-sm text-slate-500 mt-1">Already registered?
+                        <a href="polished-login.html" class="text-[#00b289] font-semibold hover:underline">Sign in to
+                            your workspace</a>
+                    </p>
+
+                    <div class="alternative-icon flex gap-2">
+                        <button type="button"
+                            class="icon-1 flex-1 flex items-center justify-center gap-2 border border-gray-200 rounded-lg py-3 text-[14px] font-medium text-gray-800 hover:border-gray-400 hover:shadow-sm active:bg-gray-50 active:scale-[0.98] transition-all duration-150">
+                            <i data-lucide="globe" class="w-4 h-4"></i>
+                            Google
+                        </button>
+
+                        <button type="button"
+                            class="icon-2 flex-1 flex items-center justify-center gap-2 border border-gray-200 rounded-lg py-3 text-[14px] font-medium text-gray-800 hover:border-gray-400 hover:shadow-sm active:bg-gray-50 active:scale-[0.98] transition-all duration-150">
+                            <img src="https://www.facebook.com/favicon.ico" alt="Facebook" class="w-5 h-5">
+                            Facebook
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider flex items-center gap-4 my-6">
+                    <span class="line flex-1 h-px bg-[#333333]"></span>
+                    <span class="divider-text text-[13px] text-gray-500">Or Continue With Email</span>
+                    <span class="line flex-1 h-px bg-[#333333]"></span>
+                </div>
+
+                <!-- First / Last name -->
+                <div class="name-row mb-2">
+                    <div class="flex gap-2">
+                        <div class="field">
+                            <label class="block text-[13px] font-medium text-gray-900 mb-2" for="first-name">First
+                                Name</label>
+                            <div class="relative">
+                                <i data-lucide="user"
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                                <input id="first-name" type="text" placeholder="John"
+                                    class="w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-2xl text-[14px] text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-300 focus:bg-white transition-all duration-200">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="block text-[13px] font-medium text-gray-900 mb-2" for="last-name">Last
+                                Name</label>
+                            <div class="relative">
+                                <i data-lucide="user"
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                                <input id="last-name" type="text" placeholder="Doe"
+                                    class="w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-2xl text-[14px] text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-300 focus:bg-white transition-all duration-200">
+                            </div>
+                        </div>
+                    </div>
+                    <span class="name-message"></span>
+                </div>
+
+                <!-- Email -->
+                <label class="block text-[13px] font-medium text-gray-900 mb-2" for="signup-email">Email Address</label>
+                <div class="field mb-2 relative">
+                    <i data-lucide="mail" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                    <input id="signup-email" type="email" placeholder="jane@example.com"
+                        class="w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-2xl text-[14px] text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-300 focus:bg-white transition-all duration-200">
+                    <span class="email-message"></span>
+                </div>
+
+                <!-- Password -->
+                <div class="field mb-2">
+                    <label class="block text-[13px] font-medium text-gray-900 mb-2" for="password">Password</label>
+                    <div class="password-wrapper relative">
+                        <i data-lucide="lock"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                        <input type="password" id="password" placeholder="••••••••••"
+                            class="w-full pl-11 pr-11 py-3.5 bg-gray-50 border border-gray-200 rounded-2xl text-[14px] text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-300 focus:bg-white transition-all duration-200">
+                        <button type="button" id="toggle-password" class="absolute right-4 top-1/2 -translate-y-1/2">
+                            <i data-lucide="eye" class="w-4 h-4 text-gray-400"></i>
+                        </button>
+                    </div>
+                    <span class="password-message text-[12px] mt-1 hidden"></span>
+                </div>
+
+                <!-- Strength Range Bar (No Badges) -->
+                <div id="strength-container" class="mt-2 hidden">
+                    <div class="flex items-center justify-between text-[11px] font-semibold text-gray-500 mb-1">
+                        <span>Password Strength:</span>
+                        <span id="strength-label" class="text-gray-400">Too Weak</span>
+                    </div>
+
+                    <!-- Range Meter -->
+                    <div class="grid grid-cols-4 gap-1 h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
+                        <div id="meter-1" class="h-full bg-gray-200 transition-colors duration-300"></div>
+                        <div id="meter-2" class="h-full bg-gray-200 transition-colors duration-300"></div>
+                        <div id="meter-3" class="h-full bg-gray-200 transition-colors duration-300"></div>
+                        <div id="meter-4" class="h-full bg-gray-200 transition-colors duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="field">
+                    <label class="block text-[13px] font-medium text-gray-900 mb-2" for="confirm-password">Confirm
+                        Password</label>
+                    <div class="password-wrapper relative">
+                        <i data-lucide="lock"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                        <input type="password" id="confirm-password" placeholder="••••••••••"
+                            class="w-full pl-11 pr-11 py-3.5 bg-gray-50 border border-gray-200 rounded-2xl text-[14px] text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-200 focus:border-green-300 focus:bg-white transition-all duration-200">
+                        <button type="button" id="toggle-confirm-password"
+                            class="absolute right-4 top-1/2 -translate-y-1/2">
+                            <i data-lucide="eye" class="w-4 h-4 text-gray-400"></i>
+                        </button>
+                    </div>
+                    <span class="confirm-password-message text-[12px] mt-1 hidden"></span>
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" id="create-account-btn"
+                class="w-full bg-[#00b289] text-white font-semibold py-3.5 rounded-lg text-[14px] hover:bg-[#019c78] active:bg-[#018a69] active:scale-[0.98] transition-all duration-150 shadow-sm hover:shadow-md">
+                Create Account
+            </button>
+
+
+            <p class="text-xs text-slate-400 text-center">
+                By clicking "Create Account", you agree to Bonsai's
+                <a href="#" class="underline hover:text-slate-600">Terms of Service</a> and
+                <a href="#" class="underline hover:text-slate-600">Privacy Policy</a>.
+            </p>
+        </div>
+
+        <!-- Floating Verification Overlay Card (Initially Hidden) -->
+        <div id="verification-overlay"
+            class="hidden absolute inset-0 z-50 backdrop-blur-md bg-white/70 flex items-center justify-center p-6 transition-all duration-300">
+
+            <!-- White Card Box -->
+            <div
+                class="bg-white border border-gray-100 shadow-2xl rounded-2xl p-8 max-w-md w-full text-center flex flex-col items-center">
+                <div
+                    class="w-16 h-16 bg-[#00b289]/10 text-[#00b289] rounded-full flex items-center justify-center mb-4">
+                    <i data-lucide="mail-check" class="w-8 h-8"></i>
+                </div>
+
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Your Account Has Been Successfully Created</h3>
+
+                <p class="text-sm text-slate-500 mb-6 leading-relaxed">
+                    You can now Log In <span id="user-email-display" class="font-semibold text-gray-800"></span>. Please
+                    click the button to Sign In.
+                </p>
+
+                <a href="polished-login.html" id="login-redirect-btn"
+                    class="w-full bg-[#00b289] text-white font-semibold py-3.5 rounded-xl text-[14px] hover:bg-[#019c78] transition-all duration-150 shadow-md block">
+                    Login to Workspace
+                </a>
+            </div>
+
+        </div>
+        <!-- Right: Image panel -->
+        <div class="image-panel p-3 flex justify-center items-center">
+            <img src="./images/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg" alt="Bonsai">
+        </div>
+
+    </form>
+
+
+    <script>
+        // names
+        const fname = document.getElementById('first-name');
+        const lname = document.getElementById('last-name');
+        const nameMSG = document.querySelector('.name-message')
+        // email
+        const email = document.getElementById('signup-email');
+        const emailMSG = document.querySelector('.email-message')
+        // password
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm-password');
+        const passMSG = document.querySelector('.password-message');
+        const confPassMSG = document.querySelector('.confirm-password-message');
+        const strengthContainer = document.getElementById('strength-container');
+        const strengthLabel = document.getElementById('strength-label');
+        // msg
+        const fillAllItemMsg = document.getElementById("toast");
+        // button   
+        const btn = document.getElementById('create-account-btn');
+        const form = document.querySelector('form');
+        const formFieldsContainer = document.getElementById('form-fields-container');
+        const verificationSuccess = document.getElementById('verification-success');
+        const userEmailDisplay = document.getElementById('user-email-display');
+        const verificationOverlay = document.getElementById('verification-overlay');
+
+        // Range
+
+        const meter = [
+            document.getElementById('meter-1'),
+            document.getElementById('meter-2'),
+            document.getElementById('meter-3'),
+            document.getElementById('meter-4')
+        ];
+
+        // Toast Helper Function
+        function showToast(message, isError = true) {
+            fillAllItemMsg.textContent = message;
+            fillAllItemMsg.style.backgroundColor = isError ? '#ef4444' : '#00b289';
+            fillAllItemMsg.style.display = 'flex';
+
+            setTimeout(() => {
+                fillAllItemMsg.style.display = 'none';
+            }, 5000);
+        }
+
+        // Reset Button Helper Function
+        function resetButtonState() {
+            btn.disabled = false;
+            btn.className = "w-full bg-[#00b289] text-white font-semibold py-3.5 rounded-lg text-[14px] hover:bg-[#019c78] active:bg-[#018a69] active:scale-[0.98] transition-all duration-150 shadow-sm hover:shadow-md flex items-center justify-center gap-2";
+            btn.innerHTML = `<span>Create Account</span>`;
+        }
+
+        // Name validation
+        const nameRegex = /^[\p{L}\s'-]{2,}$/u;
+        fname.addEventListener('input', function () {
+            if (fname.value === '') {
+                nameMSG.textContent = '';
+                return
+            }
+
+            if (!nameRegex.test(fname.value)) {
+                nameMSG.style.display = 'block'
+                nameMSG.textContent = `${fname.value} must be at least 2 letters, no numbers or symbols`;
+                nameMSG.style.color = '#ef4444';
+                return
+            } else {
+                nameMSG.style.display = 'none';
+            }
+        })
+        lname.addEventListener('input', function () {
+            if (lname.value === '') {
+                nameMSG.textContent = '';
+                return
+            }
+
+            if (!nameRegex.test(lname.value)) {
+                nameMSG.style.display = 'block'
+                nameMSG.textContent = `${lname.value} must be at least 2 letters, no numbers or symbols`;
+                nameMSG.style.color = '#ef4444';
+            } else {
+                nameMSG.style.display = 'none';
+            }
+        })
+
+
+        // Email validation 
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        email.addEventListener('input', function () {
+            if (email.value === '') {
+                emailMSG.textContent = '';
+                return
+            }
+
+            if (!emailRegex.test(email.value)) {
+                emailMSG.style.display = 'block'
+                emailMSG.textContent = 'Please enter a valid email address';
+                emailMSG.style.color = '#ef4444';
+                return
+            } else {
+                emailMSG.style.display = 'none';
+            }
+        });
+
+        // Toggle Eye Button Helpers
+        function setupToggle(btnId, inputId) {
+            const btnToggle = document.getElementById(btnId);
+            const inputField = document.getElementById(inputId);
+            if (!btnToggle || !inputField) return;
+
+            btnToggle.addEventListener('click', () => {
+                const isPass = inputField.type === 'password';
+                inputField.type = isPass ? 'text' : 'password';
+                btnToggle.innerHTML = `<i data-lucide="${isPass ? 'eye-off' : 'eye'}" class="w-4 h-4 text-gray-400"></i>`;
+                lucide.createIcons();
+            });
+        }
+        setupToggle('toggle-password', 'password');
+        setupToggle('toggle-confirm-password', 'confirm-password');
+
+        // password verification & Strength Meter calculation
+        const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
+        password.addEventListener('input', function () {
+            const val = password.value;
+
+            if (val === '') {
+                passMSG.textContent = '';
+                strengthContainer.style.display = 'none';
+                return;
+            }
+
+            strengthContainer.style.display = 'block';
+
+            if (!passwordRegex.test(val)) {
+                passMSG.style.display = 'block'
+                passMSG.textContent = 'Must be 8+ characters with a letter, number, and symbol';
+                passMSG.style.color = '#ef4444';
+            } else {
+                passMSG.style.display = 'none'
+            }
+
+            // Calculate Password Strength Score
+            const score = [
+                val.length >= 8,
+                /\d/.test(val),
+                /[a-z]/.test(val) && /[A-Z]/.test(val),
+                /[^A-Za-z0-9]/.test(val)
+            ].filter(Boolean).length;
+
+            const levels = [
+                { label: 'Weak', color: 'bg-red-500', text: 'text-red-500' },
+                { label: 'Fair', color: 'bg-orange-500', text: 'text-orange-500' },
+                { label: 'Good', color: 'bg-yellow-500', text: 'text-yellow-600' },
+                { label: 'Strong', color: 'bg-[#00b289]', text: 'text-[#00b289]' }
+            ];
+
+            meter.forEach((m, i) => {
+                m.className = 'h-full transition-colors duration-300 ' +
+                    (i < score ? levels[Math.max(0, score - 1)].color : 'bg-gray-200');
+            });
+
+            if (score > 0) {
+                strengthLabel.textContent = levels[score - 1].label;
+                strengthLabel.className = levels[score - 1].text;
+            } else {
+                strengthLabel.textContent = 'Too Weak';
+                strengthLabel.className = 'text-red-500';
+            }
+        });
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const arrayBox = [fname, lname, email, password, confirmPassword];
+
+            for (let i = 0; i < arrayBox.length; i++) {
+                if (arrayBox[i].value === '') {
+                    fillAllItemMsg.innerHTML = 'All details must be filled!';
+                    fillAllItemMsg.style.display = 'flex'
+
+                    setTimeout(() => {
+                        fillAllItemMsg.style.display = 'none';
+                    }, 5000);
+
+                    return;
+                }
+            }
+
+            if (!nameRegex.test(fname.value) || !nameRegex.test(lname.value)) {
+                fillAllItemMsg.textContent = 'Please enter valid names.';
+                fillAllItemMsg.style.display = 'flex';
+                setTimeout(() => { fillAllItemMsg.style.display = 'none'; }, 5000);
+                return;
+            }
+
+            if (!emailRegex.test(email.value)) {
+                fillAllItemMsg.textContent = 'Please enter a valid email address.';
+                fillAllItemMsg.style.display = 'flex';
+                setTimeout(() => { fillAllItemMsg.style.display = 'none'; }, 5000);
+                return;
+            }
+
+            if (!passwordRegex.test(password.value)) {
+                fillAllItemMsg.textContent = 'Password must be 8+ characters with a letter, number, and symbol.';
+                fillAllItemMsg.style.display = 'flex';
+                setTimeout(() => { fillAllItemMsg.style.display = 'none'; }, 5000);
+                return;
+            }
+
+            if (password.value !== confirmPassword.value) {
+                fillAllItemMsg.style.display = 'flex';
+                fillAllItemMsg.textContent = 'Passwords do not match';
+                setTimeout(() => {
+                    fillAllItemMsg.style.display = 'none';
+                }, 5000);
+                return;
+            }
+
+            // UPDATE THIS URL to your actual MockAPI URL:
+            const MOCK_API_URL = 'https://6ab1cb629751d2b03e6d6bda.mockapi.io/signup/bonasi/Users';
+
+
+            try {
+                // Disable button & change text
+                btn.disabled = true;
+                btn.className = "w-full bg-[#00b289] text-white font-semibold py-3.5 rounded-lg text-[14px] flex items-center justify-center gap-2 cursor-not-allowed opacity-90 shadow-sm";
+                btn.innerHTML = `
+            <i data-lucide="loader-2" id="spinner-element" class="w-4 h-4"></i>
+            <span>Creating.......</span>
+        `;
+                lucide.createIcons();
+                const spinnerIcon = document.getElementById('spinner-element');
+                if (spinnerIcon) {
+                    spinnerIcon.style.animation = 'spin 1s linear infinite';
+                }
+
+                // Duplicate Email Check
+                const checkResponse = await fetch(MOCK_API_URL);
+                if (!checkResponse.ok) {
+                    throw new Error('Could not verify email availability');
+                }
+
+                const existingUsers = await checkResponse.json();
+                const emailTaken = existingUsers.some(
+                    (user) => user.email.toLowerCase() === email.value.toLowerCase()
+                );
+
+                if (emailTaken) {
+                    resetButtonState();
+                    emailMSG.style.display = 'block';
+                    emailMSG.textContent = 'An account with this email already exists.';
+                    emailMSG.style.color = '#ef4444';
+                    return;
+                }
+
+                // 8sec delay
+                const delayPromise = new Promise(resolve => setTimeout(resolve, 6000));
+
+
+                const fetchPromise = fetch(MOCK_API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        firstName: fname.value,
+                        lastName: lname.value,
+                        email: email.value,
+                        password: password.value
+                    })
+                });
+
+
+                // Leave a blank slot before the comma to skip the delay value
+                const response = (await Promise.all([delayPromise, fetchPromise]))[1];
+
+
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('User saved to MockAPI:', data);
+
+                    // Safely update email display
+                    if (userEmailDisplay) {
+                        userEmailDisplay.textContent = email.value;
+                    }
+
+                    // Safely hide form container
+                    if (formFieldsContainer) {
+                        formFieldsContainer.style.display = 'none';
+                    }
+
+                    // Unhide overlay & float message on top of transparent form
+                    if (verificationOverlay) {
+                        verificationOverlay.classList.remove('hidden');
+                        verificationOverlay.style.display = 'flex';
+                    }
+
+                    // Safely show verification message
+                    if (verificationSuccess) {
+                        verificationSuccess.classList.remove('hidden');
+                        verificationSuccess.style.display = 'flex';
+                    }
+                } else {
+                    showToast('Signup failed. Please try again.');
+                    resetButtonState();
+                }
+            } catch (error) {
+                console.error('Signup Error:', error);
+                showToast('Network error. Check your connection.');
+                resetButtonState();
+            }
+        });
+
+        function resetButtonState() {
+            btn.disabled = false;
+            btn.className = "w-full bg-[#00b289] text-white font-semibold py-3.5 rounded-lg text-[14px] hover:bg-[#019c78] active:bg-[#018a69] active:scale-[0.98] transition-all duration-150 shadow-sm hover:shadow-md flex items-center justify-center gap-2";
+            btn.innerHTML = `<span>Create Account</span>`;
+        }
+
+
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

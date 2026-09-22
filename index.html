@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <title>Bonsai Page</title>
+</head>
+
+<body>
+    <div class="absolute inset-0 bg-[#f2faff] -z-10"
+        style="clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%, 5% 12%);">
+    </div>
+
+    <header class="relative overflow-hidden">
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="nav-cont">
+                <img src="images/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg" alt="">
+            </div>
+
+            <button id="mobile-menu-btn" class="mobile-menu-btn">
+                <i data-lucide="menu" class="w-6 h-6 text-[#4c525a]"></i>
+            </button>
+
+            <!-- Mobile menu container -->
+            <div id="mobile-menu" class="mobile-menu fixed inset-0 bg-white z-50 flex flex-col overflow-y-auto">
+                <!-- Header -->
+                <div class="flex justify-between items-center px-6 py-5 border-b border-gray-100">
+                    <img src="images/5e5fd7c602ca7cd432feb68e_bonsai-logo.svg" alt="Bonsai Logo" class="h-8">
+                    <button id="mobile-menu-close">
+                        <i data-lucide="x" class="w-7 h-7 text-[#4c525a]"></i>
+                    </button>
+                </div>
+
+                <!-- Navigation Items -->
+                <div class="flex flex-col px-6 py-2">
+
+                    <!-- Accordion Item: Product -->
+                    <div class="border-b border-gray-100">
+                        <button
+                            class="mobile-dropdown-btn w-full flex justify-between items-center py-5 text-left focus:outline-none">
+                            <span class="text-[18px] font-medium text-[#4c525a]">Product</span>
+                            <i data-lucide="chevron-down"
+                                class="chevron-icon w-5 h-5 text-gray-400 transition-transform duration-200"></i>
+                        </button>
+
+                        <!-- Hidden Submenu Container -->
+                        <div class="submenu-content hidden flex-col gap-4 pb-5 pl-2">
+                            <a href="#" class="block space-y-1">
+                                <h4 class="text-[16px] font-serif font-medium text-gray-900">Bonsai Workflow</h4>
+                                <p class="text-[13px] text-gray-500 leading-snug">Look professional, win more clients
+                                    and manage your business from one place</p>
+                            </a>
+                            <a href="#" class="block space-y-1">
+                                <h4 class="text-[16px] font-serif font-medium text-gray-900">Bonsai Tax</h4>
+                                <p class="text-[13px] text-gray-500 leading-snug">Track expenses, maximize tax
+                                    write-offs, and estimate taxes without the headache</p>
+                            </a>
+                            <a href="#" class="block space-y-1">
+                                <h4 class="text-[16px] font-serif font-medium text-gray-900">Bonsai Cash</h4>
+                                <p class="text-[13px] text-gray-500 leading-snug">Bonsai's all-in-one financial hub: no
+                                    fees and lightning fast payouts</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item: Templates -->
+                    <div class="border-b border-gray-100">
+                        <button
+                            class="mobile-dropdown-btn w-full flex justify-between items-center py-5 text-left focus:outline-none">
+                            <span class="text-[18px] font-medium text-[#4c525a]">Templates</span>
+                            <i data-lucide="chevron-down"
+                                class="chevron-icon w-5 h-5 text-gray-400 transition-transform duration-200"></i>
+                        </button>
+
+                        <div class="left-list flex-col border-r border-gray-100 py-4">
+
+                            <!-- Contract Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Contract Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Proposal Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Proposal Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Invoice Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="dollar-sign" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Invoice Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Agreement Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Agreement Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Quote Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Quote Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Scope of Work Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Scope of Work Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Brief Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Brief Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- Standard Nav Links -->
+                    <div class="py-5 border-b border-gray-100">
+                        <a href="#" class="text-[18px] font-medium text-[#4c525a] block">Pricing</a>
+                    </div>
+                    <div class="py-5 border-b border-gray-100">
+                        <a href="#" class="text-[18px] font-medium text-[#4c525a] block">Reviews</a>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <button id="loginBtn"
+                        class="mt-8 border border-[#00b289] text-[#00b289] font-semibold uppercase py-3 rounded-md hover:bg-[#00b289]/5 transition-colors">
+                        LOG IN
+                    </button>
+                    <button id="signUP"
+                        class="mt-4 bg-[#00b289] text-white font-semibold uppercase py-3 rounded-md hover:bg-[#019c78] transition-colors mb-8">
+                        START FREE
+                    </button>
+                </div>
+            </div>
+
+            <div class="nav-cont2">
+                <!-- Nav-links -->
+                <li id="product" class="relative group flex items-center gap-1 list-none cursor-pointer">
+                    <a href="#" class="text-gray-700 hover:text-gray-900 font-medium">Product</a>
+                    <i data-lucide="chevron-down"
+                        class="w-4 h-4 text-gray-500 transition-transform group-hover:rotate-180"></i>
+
+                    <!-- Dropdown Menu -->
+                    <div class="product-dropdown absolute top-full left-0 mt-3 w-85 bg-white border border-gray-100 shadow-xl
+                opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                transition-all duration-200 z-50 p-6 flex flex-col gap-5">
+
+                        <!-- Item 1: Bonsai Workflow -->
+                        <a href="#" class="group/item flex items-start justify-between">
+                            <div class="dropdown-item">
+                                <h4
+                                    class="text-lg font-serif text-gray-900 group-hover/item:text-[#00b289] transition-colors">
+                                    Bonsai Workflow
+                                </h4>
+                                <p class="text-[13px] text-gray-500 leading-relaxed">
+                                    Look professional, win more clients and manage your business from one place
+                                </p>
+                            </div>
+                            <!-- <i data-lucide="chevron-right"
+                                class="w-[18px] h-[18px] text-gray-400 mt-1 opacity-0 group-hover/item:opacity-100 transition-opacity"></i> -->
+                        </a>
+
+                        <div class="h-px bg-gray-100"></div>
+
+                        <!-- Item 2: Bonsai Tax -->
+                        <a href="#" class="group/item flex items-start justify-between">
+                            <div class="dropdown-item">
+                                <h4
+                                    class="text-lg font-serif text-gray-900 group-hover/item:text-[#00b289] transition-colors">
+                                    Bonsai Tax
+                                </h4>
+                                <p class="text-[13px] text-gray-500 leading-relaxed">
+                                    Track expenses, maximize tax write-offs, and estimate taxes without the headache
+                                </p>
+                            </div>
+                            <!-- <i data-lucide="chevron-right"
+                                class="w-[18px] h-[18px] text-gray-400 mt-1 opacity-0 group-hover/item:opacity-100 transition-opacity"></i> -->
+                        </a>
+
+                        <div class="h-px bg-gray-100"></div>
+
+                        <!-- Item 3: Bonsai Cash -->
+                        <a href="#" class="group/item flex items-start justify-between">
+                            <div class="dropdown-item">
+                                <h4
+                                    class="text-lg font-serif text-gray-900 group-hover/item:text-[#00b289] transition-colors">
+                                    Bonsai Cash
+                                </h4>
+                                <p class="text-[13px] text-gray-500 leading-relaxed">
+                                    Bonsai's all-in-one financial hub: no fees and lightning fast payouts
+                                </p>
+                            </div>
+                            <!-- <i data-lucide="chevron-right"
+                                class="w-[18px] h-[18px] text-gray-400 mt-1 opacity-0 group-hover/item:opacity-100 transition-opacity"></i> -->
+                        </a>
+
+                    </div>
+                </li>
+
+                <!-- Templates Dropdown-->
+                <!-- Templates Dropdown — static version, no JS required -->
+                <li class="relative group flex items-center gap-1 list-none">
+                    <a href="#">Templates</a>
+                    <i data-lucide="chevron-down" class="w-4 h-4 ml-2 transition-transform group-hover:rotate-180"></i>
+
+                    <div class="templates-dropdown absolute top-full left-1/2 -translate-x-1/2 mt-2
+        bg-white border border-gray-100 rounded-xl shadow-2xl
+        opacity-0 invisible group-hover:opacity-100 group-hover:visible
+        transition-all duration-200 z-50
+        grid grid-cols-[280px_1fr] w-150 overflow-hidden">
+
+                        <!-- Left: category list -->
+                        <div class="left-list border-r border-gray-100 py-4">
+
+                            <!-- Contract Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Contract Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Proposal Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Proposal Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Invoice Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="dollar-sign" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Invoice Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Agreement Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Agreement Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Quote Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Quote Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Scope of Work Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Scope of Work Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                            <!-- Brief Templates -->
+                            <a href="#"
+                                class="group/item flex items-center justify-between gap-3 px-6 py-3 hover:bg-gray-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-gray-500"></i>
+                                    <span class="text-[15px] text-gray-800">Brief Templates</span>
+                                </span>
+                                <i data-lucide="chevron-right"
+                                    class="w-4 h-4 text-gray-400 opacity-0 group-hover/item:opacity-100 transition-opacity"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Reviews</a></li>
+            </div>
+
+            <div class="nav-btn">
+                <button id="loginBtn2" class="nav-btn-1">LOG IN</button>
+                <button class="nav-btn-2" id="signUP2">START FREE</button>
+            </div>
+        </nav>
+
+        <div class="headers-cont">
+            <div class="title-1">
+                <p style="font-size: 24px; color: #4c525a;">Plans & Pricing</p>
+            </div>
+
+            <div class="head-sec1">
+                <div class="title-2">
+                    <p style="font-size: 17px; color: #4c525a;">Monthly</p>
+                </div>
+
+                <div class="title-3">
+                    <img src="images/5e9d7255d3886a6103fb12a9_FREE-text.svg" alt="" style="margin-bottom: 0">
+                    <button id="pricing-toggle" class="toggle-switch">
+                        <span class="toggle-circle"></span>
+                    </button>
+                </div>
+
+                <div class="title4 mr-auto">
+                    <p style="color: gray;">YEARLY</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION-1 -->
+    <section class="section-1 flex items-stretch gap-6">
+
+        <!-- Card-1 -->
+        <div class="card sec-cont-1 p-6 flex flex-col">
+            <div class="text-xl font-bold text-gray-700 mb-1">Starter</div>
+            <p class="text-sm text-gray-500 mb-4">Ideal for freelancers and contractors just starting out.</p>
+
+            <div class="flex items-baseline mb-4 border-b-3 border-[#00b289] pb-3">
+                <span class="text-2xl font-bold text-gray-900">$</span>
+                <span class="monthly text-5xl font-extrabold text-gray-700" data-monthly="24" data-yearly="20">24</span>
+                <span class="text-sm text-gray-500 ml-1">/Month</span>
+                <div class="yearlyLabel flex flex-col w-full">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-400">Billed Yearly</span>
+                </div>
+            </div>
+
+            <ul class="lists mb-6">
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">All Templates</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Unlimited Clients & Projects</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Invoicing & Payments</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Proposals & Contracts</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Tasks & Time Tracking</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Client CRM</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Expense Tracking</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Up to 5 Project Collaborators</span>
+                </li>
+            </ul>
+
+            <a class="startFreeBtn mt-auto w-full bg-[#00b289] text-white font-semibold py-3 hover:bg-[#019c78] active:bg-[#018a69] active:scale-[0.98] transition-all duration-150 shadow-sm hover:shadow-md rounded-md text-center inline-flex items-center justify-center gap-2"
+                href="signup.html">
+                <!-- Spinner Circle -->
+                <span class="startFreeSpinner custom-spinner hidden"></span>
+                <!-- Button Text -->
+                <span class="startFreeText">Start Free</span>
+            </a>
+        </div>
+
+        <!-- Card-2 -->
+        <div class="card sec-cont-1 p-6 flex flex-col">
+            <div class="text-xl font-bold text-gray-700 mb-1">Professional</div>
+            <p class="text-sm text-gray-500 mb-4">Everything a growing independent business needs to thrive.</p>
+
+            <div class="flex items-baseline mb-4 border-b-3 border-[#00b289] pb-3">
+                <span class="text-2xl font-bold text-gray-900">$</span>
+                <span class="monthly text-5xl font-extrabold text-gray-700" data-monthly="39" data-yearly="32">39</span>
+                <span class="text-sm text-gray-500 ml-1">/Month</span>
+                <div class="yearlyLabel flex flex-col w-full">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-400">Billed Yearly</span>
+                </div>
+            </div>
+
+            <ul class="lists mb-6">
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Everything in Starter plus...</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Custom Branding</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Forms & Questionnaires</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Workflow Automations</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Client Portal</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">QuickBooks Integration</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Calendly Integration</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Zapier Integration</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Up to 15 Project Collaborators</span>
+                </li>
+            </ul>
+
+            <a class="startFreeBtn mt-auto w-full bg-[#00b289] text-white font-semibold py-3 hover:bg-[#019c78] active:bg-[#018a69] active:scale-[0.98] transition-all duration-150 shadow-sm hover:shadow-md rounded-md text-center inline-flex items-center justify-center gap-2"
+                href="signup.html">
+                <!-- Spinner Circle -->
+                <span class="startFreeSpinner custom-spinner hidden"></span>
+                <!-- Button Text -->
+                <span class="startFreeText">Start Free</span>
+            </a>
+        </div>
+
+        <!-- Card-3 -->
+        <div class="card sec-cont-1 p-6 flex flex-col">
+            <div class="text-xl font-bold text-gray-700 mb-1">Business</div>
+            <p class="text-sm text-gray-500 mb-4">The perfect package for small businesses and agencies.</p>
+
+            <div class="flex items-baseline mb-4 border-b-3 border-[#00b289] pb-3">
+                <span class="text-2xl font-bold text-gray-900">$</span>
+                <span class="monthly text-5xl font-extrabold text-gray-700" data-monthly="79" data-yearly="65">79</span>
+                <span class="monthly-label text-sm text-gray-500 ml-1">/Month</span>
+                <div class="yearlyLabel flex flex-col w-full">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-400">Billed Yearly</span>
+                </div>
+            </div>
+
+            <ul class="lists mb-6">
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">All Templates</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Everything in Starter and Professional plus...</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Subcontractor Management</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Hiring Agreement Templates (1099 contracts)</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Subcontractor Onboarding</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Talent Pool</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">3 Team Seats (additional seats $9/month)</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Accountant Access</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Connect Multiple Bank Accounts</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Unlimited Subcontractors</span>
+                </li>
+                <li class="flex mb-3 gap-2">
+                    <i data-lucide="check" class="w-5 h-5 text-[#00b289] stroke-3"></i>
+                    <span class="text-sm text-[#4c525a]">Unlimited Project Collaborators</span>
+                </li>
+            </ul>
+
+            <a class="startFreeBtn mt-auto w-full bg-[#00b289] text-white font-semibold py-3 hover:bg-[#019c78] active:bg-[#018a69] active:scale-[0.98] transition-all duration-150 shadow-sm hover:shadow-md rounded-md text-center inline-flex items-center justify-center gap-2"
+                href="signup.html">
+                <!-- Spinner Circle -->
+                <span class="startFreeSpinner custom-spinner hidden"></span>
+                <!-- Button Text -->
+                <span class="startFreeText">Start Free</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECTION-2 -->
+    <section class="sec2 bg-[white]">
+        <h2 style="color: #4c525a;" class="text-center text-[32px]">Super charge your work with add-ons</h2>
+
+        <!-- card 1 -->
+        <div>
+            <div class="sec-2-card-1 mt-20">
+                <div class="content m-auto">
+                    <p class="first-p-tag text-[22px] font-bold text-[#333333]">Collaborators</p>
+                    <p class="second-p-tag text-[16px] text-[#4c4d5f]">
+                        Invite other users to specific projects for limited access and functionality.
+                    </p>
+                </div>
+                <div class="price text-[32px] font-bold text-[#333333] pt-9 pb-9">Free</div>
+            </div>
+        </div>
+
+        <!-- card 2 -->
+        <div>
+            <div class="sec-2-card-1 mt-5">
+                <div class="content m-auto">
+                    <p class="first-p-tag text-[22px] font-bold text-[#333333]">Partners</p>
+                    <p class="second-p-tag text-[16px] text-[#4c4d5f]">
+                        Invite other users for full account access and company management.
+                    </p>
+                </div>
+                <div class="price pt-9 pb-9">
+                    <div class="text-[32px] font-bold text-[#333333]">$9</div>
+                    <div class="text-[13px] text-gray-500 tracking-wide">/MONTH</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- card 3 -->
+        <div>
+            <div class="sec-2-card-1 mt-5">
+                <div class="content m-auto">
+                    <p class="first-p-tag text-[22px] font-bold text-[#333333]">Bonsai Tax</p>
+                    <p class="second-p-tag text-[16px] text-[#4c4d5f]">
+                        Track expenses, identify write-offs, and estimate quarterly taxes easily.
+                    </p>
+                    <a href="" style="text-decoration: none; display: flex; align-items: center;"
+                        class="text-[14px] font-semibold tracking-wide text-[#00b289]">
+                        LEARN MORE
+                        <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                    </a>
+                </div>
+                <div class="price pt-9 pb-9">
+                    <div class="text-[32px] font-bold text-[#333333]">$10</div>
+                    <div class="text-[13px] text-gray-500 tracking-wide">/MONTH</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section class="sec3 pl-10 pr-10">
+        <div class="grid-cont bg-[#F2FAFF] rounded-xl">
+            <div class="sec3-grid1 m-auto">
+                <h2 class="text-[32px] text-[#4c525a] leading-snug">
+                    It's <span class="text-[#00b289]">your</span> business.<br>
+                    We're here to help it grow.
+                </h2>
+            </div>
+            <div class="sec3-grid2 m-auto">
+                <button
+                    class="bg-[#00b289] text-white text-[13px] font-semibold uppercase tracking-wide px-6 py-3 hover:bg-[#019c78] active:bg-[#018a69] active:scale-[0.98] transition-all duration-150 shadow-sm hover:shadow-md rounded">
+                    <a href="signup.html" style="text-decoration: none; color: inherit;">START FREE</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section>
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-[30px] leading-[1.3] font-bold text-[#00b289] text-center mb-10">
+                Frequently Asked Questions
+            </h2>
+
+            <!-- card-1 -->
+            <div
+                class="sec4-maincontent flex justify-between items-center py-4 border-b border-gray-100 cursor-pointer">
+                <div class="flex justify-between">
+                    <p class="sec4-maincontent-Ptag text-[20px] font-bold text-[#4c525a] hover:text-[#00b289] mb-2.5">
+                        How does the free trial work?
+                    </p>
+                    <i data-lucide="chevron-down" class="sec4-icon w-5 h-5 text-gray-400"></i>
+                </div>
+
+                <div class="main-content">
+                    <p class="text-[16px] leading-[1.6] text-[#4c525a]">
+                        When you start your trial with Bonsai you'll receive full, unlimited access to all of Bonsai's
+                        Workflow or Workflow Plus Features! You will need to enter your credit card information to
+                        begin your trial, but don't worry - we won't charge you anything until the subscription ends!
+                        If you wish to cancel at anytime during the trial period, you can do so through your
+                        Subscriptions Settings Page.
+                    </p>
+                </div>
+            </div>
+
+            <!-- card-2 -->
+            <div
+                class="sec4-maincontent flex justify-between items-center py-4 border-b border-gray-100 cursor-pointer">
+                <div class="flex justify-between">
+                    <p class="sec4-maincontent-Ptag text-[20px] font-bold text-[#4c525a] hover:text-[#00b289] mb-2.5">
+                        Can I change plans anytime?
+                    </p>
+                    <i data-lucide="chevron-down" class="sec4-icon w-5 h-5 text-gray-400"></i>
+                </div>
+                <div class="main-content">
+                    <p class="text-[16px] leading-[1.6] text-[#4c525a]">
+                        Yes, you can from within your account. If you have already subscribed to a plan, or want to
+                        downgrade or upgrade your current one, you can do this by going to your "Settings" and
+                        "Subscription".
+                    </p>
+                </div>
+            </div>
+
+            <!-- card-3 -->
+            <div
+                class="sec4-maincontent flex justify-between items-center py-4 border-b border-gray-100 cursor-pointer">
+                <div class="flex justify-between">
+                    <p class="sec4-maincontent-Ptag text-[20px] font-bold text-[#4c525a] hover:text-[#00b289] mb-2.5">
+                        How do I pause my Bonsai subscription?
+                    </p>
+                    <i data-lucide="chevron-down" class="sec4-icon w-5 h-5 text-gray-400"></i>
+                </div>
+                <div class="main-content">
+                    <p class="text-[16px] leading-[1.6] text-[#4c525a]">
+                        We totally understand that with the nature of freelancing, work ebbs and flows so you might
+                        not always need your Bonsai subscription to remain active! The good news is that you can
+                        cancel or pause your monthly subscription at any time without penalty. Once cancelled, you'll
+                        be able to continue logging in to access all your documents and even continue to use our
+                        free features, like Time Tracking! In order to cancel your subscription, login to your
+                        Bonsai account.
+                    </p>
+                </div>
+            </div>
+
+            <!-- card-4 -->
+            <div class="sec4-maincontent flex justify-between items-center py-4 cursor-pointer">
+                <div class="flex justify-between">
+                    <p class="sec4-maincontent-Ptag text-[20px] font-bold text-[#4c525a] hover:text-[#00b289] mb-2.5">
+                        What is your refund policy?
+                    </p>
+                    <i data-lucide="chevron-down" class="sec4-icon w-5 h-5 text-gray-400"></i>
+                </div>
+                <div class="main-content">
+                    <p class="text-[16px] leading-[1.6] text-[#4c525a]">
+                        If you contact us within 2 weeks of being charged for your subscription, we will be happy to
+                        issue a refund for you! Beyond those 2 weeks, you will need to cancel or modify the
+                        subscription from the Subscriptions Tab in Settings to avoid future charges, but refunds will
+                        not be issued. This applies to both monthly and annual plans.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="px-10 py-16">
+        <!-- footer card 1 -->
+        <div class="foot-container">
+            <div class="foot-card-1">
+                <p class="text-[14px] font-bold uppercase mb-5 text-[#4c525a]">PRODUCT</p>
+
+                <div class="ft-product-links">
+                    <ul class="leading-6 mb-10">
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Proposals</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Contracts</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Invoicing</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Client CRM</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Time Tracking</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Track Tracking</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Forms</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Accounting</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Bonsai Tax</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Bonsai Cash</a></li>
+                    </ul>
+                    <div class="ft-card1-sec2">
+                        <ul>
+                            <li><a href="" class="text-[15px] text-[#00b289]">Pricing</a></li>
+                            <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Bonsai Reviews</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer card 2 -->
+        <div class="foot-container">
+            <div class="foot-card-1">
+                <p class="text-[14px] font-bold uppercase mb-5 text-[#4c525a]">FREE RESOURCES</p>
+
+                <div class="ft-product-links">
+                    <ul class="leading-6">
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Freelance Resources</a>
+                        </li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Freelance Blog by
+                                Bonsai</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">How to Write a
+                                Contract</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Online Signature
+                                Maker</a></li>
+                    </ul>
+
+                    <div class="ft-card1-sec2">
+                        <ul class="leading-6 mb-8">
+                            <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Self-Employed Taxes
+                                    Hub</a></li>
+                            <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Self-Employed Tax
+                                    Calculator</a></li>
+                            <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Self-Employed Tax</a>
+                            </li>
+                            <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Deductions</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="ft-card1-sec3 p-0 m-0">
+                        <p class="mb-5 text-[14px] font-bold uppercase text-[#4c525a]">Templates</p>
+                        <ul class="leading-6">
+                            <li class="flex">
+                                <a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Invoice Templates</a>
+                                <i data-lucide="chevron-down" class="w-4 h-4 m-auto text-gray-400"></i>
+                            </li>
+                            <li class="flex">
+                                <a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Proposal
+                                    Templates</a>
+                                <i data-lucide="chevron-down" class="w-4 h-4 m-auto text-gray-400"></i>
+                            </li>
+                            <li class="flex">
+                                <a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Contract
+                                    Templates</a>
+                                <i data-lucide="chevron-down" class="w-4 h-4 m-auto text-gray-400"></i>
+                            </li>
+                            <li class="flex">
+                                <a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Agreement
+                                    Templates</a>
+                                <i data-lucide="chevron-down" class="w-4 h-4 m-auto text-gray-400"></i>
+                            </li>
+                            <li class="flex">
+                                <a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Scope of Work
+                                    Templates</a>
+                                <i data-lucide="chevron-down" class="w-4 h-4 m-auto text-gray-400"></i>
+                            </li>
+                            <li class="flex">
+                                <a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Quote Templates</a>
+                                <i data-lucide="chevron-down" class="w-4 h-4 m-auto text-gray-400"></i>
+                            </li>
+                            <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Credit Note
+                                    Templates</a></li>
+                            <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Estimate
+                                    Templates</a></li>
+                            <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Form Templates</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer card 3 -->
+        <div class="foot-container">
+            <div class="foot-card-1">
+                <p class="text-[14px] font-bold uppercase mb-5 text-[#4c525a]">BONSAI</p>
+
+                <div class="ft-product-links">
+                    <ul class="leading-6 mb-5">
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">About</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Careers</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Support</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">LinkedIn</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Twitter</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Privacy policy</a></li>
+                        <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Legal</a></li>
+                    </ul>
+
+                    <div class="ft-card1-sec2">
+                        <ul class="mb-4 leading-6">
+                            <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Affiliates</a></li>
+                            <li><a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Write for Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="ft-card1-sec2">
+                        <ul>
+                            <li class="flex">
+                                <a href="" class="text-[15px] text-[#4c4d5f] hover:text-[#00b289]">Comparisons</a>
+                                <i data-lucide="chevron-down" class="w-4 h-4 m-auto text-gray-400"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
